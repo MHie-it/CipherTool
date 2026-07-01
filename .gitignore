@@ -1,0 +1,10 @@
+.vs/
+**/bin/
+**/obj/
+
+ciphertool-fe/node_modules/
+ciphertool-fe/dist/
+ciphertool-fe/build/
+
+*.user
+*.suo
