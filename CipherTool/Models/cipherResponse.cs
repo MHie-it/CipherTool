@@ -1,6 +1,6 @@
 ﻿namespace CipherTool.Models
 {
-    public class cipherResponse
+    public class CipherResponse
     {
         public bool Success { get; set; }
         public string Result { get; set; } = "";

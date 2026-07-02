@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>🔐 Mã hóa / Giải mã </h1>
+      <h1> Mã hóa / Giải mã </h1>
 
       <div className="card">
         <label>Văn bản</label>
@@ -44,22 +44,22 @@ function App() {
 
         <div className="buttons">
           <button onClick={() => call("encrypt")} disabled={loading}>
-            🔒 Mã hóa
+             Mã hóa
           </button>
           <button onClick={() => call("decrypt")} disabled={loading} className="secondary">
-            🔓 Giải mã
+             Giải mã
           </button>
         </div>
 
         {loading && <p className="info">Đang xử lý...</p>}
-        {error && <p className="error">⚠️ {error}</p>}
+        {error && <p className="error"> {error}</p>}
 
         {result && (
           <div className="result">
             <label>Kết quả</label>
             <textarea rows={4} readOnly value={result} />
             <button onClick={() => navigator.clipboard.writeText(result)}>
-              📋 Sao chép
+               Sao chép
             </button>
           </div>
         )}

@@ -6,40 +6,40 @@ namespace CipherTool.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class cipherController : ControllerBase
+    public class CipherController : ControllerBase
     {
-        private readonly cipherService _crypto;
+        private readonly CipherService _crypto;
 
-        public cipherController(cipherService crypto)
+        public CipherController(CipherService crypto)
         {
             _crypto = crypto;
         }
 
         [HttpPost("encrypt")]
-        public IActionResult Encrypt([FromBody] cipherRequest req)
+        public IActionResult Encrypt([FromBody] CipherRequest req)
         {
             try
             {
                 var result = _crypto.AesEncrypt(req.Text);
-                return Ok(new cipherResponse { Success = true, Result = result });
+                return Ok(new CipherResponse { Success = true, Result = result });
             }
             catch (Exception ex)
             {
-                return BadRequest(new cipherResponse { Success = false, Error = ex.Message });
+                return BadRequest(new CipherResponse { Success = false, Error = ex.Message });
             }
         }
 
         [HttpPost("decrypt")]
-        public IActionResult Decrypt([FromBody] cipherRequest req)
+        public IActionResult Decrypt([FromBody] CipherRequest req)
         {
             try
             {
                 var result = _crypto.AesDecrypt(req.Text);
-                return Ok(new cipherResponse { Success = true, Result = result });
+                return Ok(new CipherResponse { Success = true, Result = result });
             }
             catch (Exception ex)
             {
-                return BadRequest(new cipherResponse { Success = false, Error = ex.Message });
+                return BadRequest(new CipherResponse { Success = false, Error = ex.Message });
             }
         }
     }

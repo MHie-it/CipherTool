@@ -2,7 +2,7 @@
 using System.Text;
 namespace CipherTool.Service
 {
-    public class cipherService
+    public class CipherService
     {
         private const string DEFAULT_KEY = "minhhiep";
 

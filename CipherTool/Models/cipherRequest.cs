@@ -1,6 +1,6 @@
 ﻿namespace CipherTool.Models
 {
-    public class cipherRequest
+    public class CipherRequest
     {
         public string Text { get; set; } = "";
     }
